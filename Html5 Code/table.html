@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>table exercise</title>
+</head>
+
+<body>
+    <h3>Cell taht spans two columns</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>55577854</td>
+            <td>13472598768</td>
+        </tr>
+    </table>
+    <h3>Cell that spans two rows</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</th>
+            <td>55577854</td>
+        </tr>
+        <tr>
+            <td>13472598768</td>
+        </tr>
+    </table>
+    <br />
+    <h3>labels in tables</h3>
+    <table border="1">
+        <tr>
+            <td>
+                <p>This is a paragraph</p>
+                <p>This is another paragraph</p>
+            </td>
+            <td>
+                <!-- This cell contains a table: -->
+                <P>This cell contains a table:</P>
+                <table border="1">
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>D</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <h4>table without cellpadding</h4>
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>Thomas</td>
+            <td>18</td>
+        </tr>
+    </table>
+    <h4>table with cellpadding</h4>
+    <table border="1" cellpadding="6">
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>Thomas</td>
+            <td>18</td>
+        </tr>
+    </table>
+    <h4>table with cellspacing 0:</h4>
+    <table border="1" cellspacing="0">
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>Thomas</td>
+            <td>18</td>
+        </tr>
+    </table>
+    <h4>table with cellspacing 10:</h4>
+    <table border="1" cellspacing="10">
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>Thomas</td>
+            <td>18</td>
+        </tr>
+    </table>
+</body>
+
+</html>

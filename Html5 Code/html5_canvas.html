@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>html5 canvas exercise</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+    <!--     creat a canvas -->
+    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000;"></canvas>
+    <script type="text/javascript">
+    // get canvas id
+    var c = document.getElementById("myCanvas");
+    // create a context
+    var ctx = c.getContext("2d");
+    // set color
+    ctx.fillStyle = "#FF0000";
+    // set the position for the rect
+    ctx.fillRect(0, 0, 150, 75);
+    </script>
+    <br/>
+    <canvas id="line_canvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    <script type="text/javascript">
+    //get line canvas id
+    var line = document.getElementById("line_canvas");
+    var line_ctx = line.getContext("2d");
+    line_ctx.moveTo(0, 0);
+    line_ctx.lineTo(200, 100);
+    line_ctx.stroke();
+    </script>
+    <br/>
+    <canvas id="arc_canvas" width="200" height="100" style="border:1px solid red"></canvas>
+    <script type="text/javascript">
+    //get arc canvas id
+    var arc = document.getElementById("arc_canvas");
+    var arc_ctx = arc.getContext("2d");
+    arc_ctx.beginPath();
+    arc_ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    arc_ctx.stroke();
+    </script>
+    <br/>
+    <canvas id="text_canvas" width="200" height="100" style="border:1px solid blue"></canvas>
+    <script type="text/javascript">
+    //get text canvas id
+    var text = document.getElementById("text_canvas");
+    var text_ctx = text.getContext("2d");
+    text_ctx.font="30px Arial";
+    text_ctx.fillText("Hello World",10,50);
+    </script>
+    <br/>
+    <canvas id="text1_canvas" width="200" height="100" style="border:1px solid blue"></canvas>
+    <script type="text/javascript">
+    //get text1 canvas id
+    var text = document.getElementById("text1_canvas");
+    var text_ctx = text.getContext("2d");
+    text_ctx.font="30px Arial";
+    text_ctx.strokeText("Hello World",10,50);
+    </script>
+     <br/>
+    <canvas id="line_gradient" width="200" height="100" style="border:1px solid blue"></canvas>
+    <script type="text/javascript">
+    //get line gradient canvas id
+    var line_gradient = document.getElementById("line_gradient");
+    var line_gradient_ctx = line_gradient.getContext("2d");
+    //create a gradient
+    //var grd=line_gradient_ctx.createLinearGradient(0,0,200,0);
+    var grd=line_gradient_ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    //Fill with gradient
+    line_gradient_ctx.fillStyle=grd;
+    line_gradient_ctx.fillRect(10,10,150,80);
+    </script>
+    <br/>
+    <img id="scream" src="images/img_the_scream.jpg" width="220" height="250">
+    <canvas id="image_canvas" width="250" height="300" style="border:1px solid blue"></canvas>
+    <script type="text/javascript">
+    	var img = document.getElementById("image_canvas");
+    	var img_ctx = img.getContext("2d");
+    	var image=document.getElementById("scream");
+        image.onload=function(){
+        	img_ctx.drawImage(image,10,10);
+        }
+    </script>
+</body>
+
+</html>
