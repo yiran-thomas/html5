@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>html5 form formenctype</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+    <!-- enctype only can be used for method 'post' -->
+    <form action="" method="post" enctype="multipart/form-data">
+        First name:
+        <input type="text" name="fname"></input>
+        <br/> Last name:
+        <input type="text" name="lname"></input>
+        <br/>
+        <!-- the form send the data as default encoding set -->
+        <input type="submit"></input>
+        <!-- formenctype can overwritten the property enctype. -->
+        <!-- the form send the data as multipart/form-data encoding set -->
+        <input type="submit" formenctype="multipart/form-data"></input>
+    </form>
+</body>
+
+</html>

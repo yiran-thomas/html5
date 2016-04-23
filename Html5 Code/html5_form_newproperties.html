@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>html5 form new properties</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+    <!-- autocomplete=on,the value for the form fields can be filled automatically. -->
+    <!-- novalidate:the field or form should not validated when submit -->
+    <form action="" autocomplete="on" novalidate="true" form="form1">
+        First name:
+        <!-- autofocus can set the cursor on thefield -->
+        <input type="text" name="fname" autofocus="true"></input>
+        <br/> Last name:
+        <input type="text" name="lname"></input>
+        <br/> E-mail:
+        <!-- the property for autocomplete can be reset in form field. -->
+        <input type="text" name="email" autocomplete="on"></input>
+        <br/>
+        <input type="submit"></input>
+    </form>
+    <!-- the field department still belongs to the form(form1) -->
+    department:
+    <input type="text" name="department" form="form1"></input>
+    <!-- action can set the url after submit this form -->
+    <form action="">
+    	First name:<input type="text" name="fname"></input>
+    	<br/>
+    	Last  name:<input type="text" name="lname"></input>
+    	<br/>
+    	<input type="submit" value="Submit"></input>
+    	<br/>
+    	<!-- the property formaction can be used for the type 'submit' and 'image' -->
+    	<!-- formaction can overwirtten the property action -->
+    	<input type="submit" value="Submit" formaction=""></input>
+    </form>
+</body>
+
+</html>
